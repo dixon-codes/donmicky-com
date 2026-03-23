@@ -1,0 +1,32 @@
+name: Deploy to SiteGround via FTP
+
+on:
+  push:
+    branches:
+      - main  # Triggers on every push to main branch
+
+jobs:
+  deploy:
+    name: FTP Deploy
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2  # Needed to detect changed files
+
+      - name: Deploy via FTP
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.5
+        with:
+          server: ftp.donmicky.co.tz
+          username: ${{ secrets.FTP_USERNAME }}
+          password: ${{ secrets.FTP_PASSWORD }}
+          port: 21
+          local-dir: ./          # Root of this repo = public_html contents
+          server-dir: /public_html/  # Remote destination on SiteGround
+          exclude: |
+            **/.git*
+            **/.git*/**
+            **/node_modules/**
+            **/*.zip

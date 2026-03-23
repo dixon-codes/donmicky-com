@@ -1,0 +1,14 @@
+Options +MultiViews
+RewriteEngine On
+
+RewriteCond %{REQUEST_FILENAME} !-F
+
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+
+# 1---- Establish a custom 404 file not found page----
+ErrorDocument 404 /index
+# 2---- prevent file listing in all directory in your folder----
+IndexIgnore *

@@ -1,0 +1,23 @@
+# Large archives
+*.zip
+*.tar.gz
+*.rar
+
+# XAMPP / local environment
+*.log
+/logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# Sensitive config (move credentials to environment variables)
+config.php
+.env
