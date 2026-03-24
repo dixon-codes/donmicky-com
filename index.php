@@ -6,7 +6,7 @@
   <title>Donmicky Real Estate Developers</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta content="real estate, property, Tanzania, Dar es Salaam, buy, sell, house" name="keywords" />
-  <meta content="Donmicky Real Estate Developers – Buy and sell properties in Tanzania with ease." name="description" />
+  <meta content="Donmicky Real Estate Developers – Find affordable, quality houses with reliable internet access in Tanzania." name="description" />
 
   <!-- Favicon -->
   <link href="img/icon.jpeg" rel="icon" />
@@ -198,6 +198,9 @@
                   <h1 class="display-2 text-light mb-3 animated slideInDown">
                     YOUR TRUSTED PARTNER IN PROPERTY
                   </h1>
+                  <p class="fs-4 text-light mb-4 animated slideInDown">
+                    Affordable, Quality houses with internet
+                  </p>
                   <div class="d-flex gap-3 justify-content-center flex-wrap">
                     <a href="order?action=buy" class="btn btn-new py-3 px-5">Buy a Property</a>
                     <a href="order?action=sell" class="btn btn-outline-light py-3 px-5">Sell a Property</a>
@@ -220,6 +223,9 @@
                   <h1 class="display-2 text-light mb-3 animated slideInDown">
                     FIND YOUR DREAM HOME IN TANZANIA
                   </h1>
+                  <p class="fs-4 text-light mb-4 animated slideInDown">
+                    Affordable, Quality houses with internet
+                  </p>
                   <a href="order?action=buy" class="btn btn-new py-3 px-5">View Properties</a>
                 </div>
               </div>
@@ -256,8 +262,9 @@
               <h6 class="text-body text-uppercase mb-2">Our Company</h6>
               <h1 class="display-6 mb-0">Donmicky Real Estate Developers</h1>
             </div>
-            <p>Donmicky Real Estate Developers is a trusted property company based in Dar es Salaam, Tanzania. We connect buyers with quality homes and help property owners find the right buyers quickly and professionally.</p>
-            <p>Whether you are looking to purchase your dream home or sell your property at the best price, our team is here to guide you every step of the way.</p>
+            <h5 class="text-primary mb-4">Affordable, Quality houses with internet</h5>
+            <p>Donmicky Real Estate Developers is a trusted property company based in Dar es Salaam, Tanzania. We specialize in providing families and professionals with affordable, high-quality homes that come fully equipped with reliable internet access.</p>
+            <p>Whether you are looking to purchase your perfect modern living space or sell your property at the best price, our team is here to guide you every step of the way.</p>
             <div class="mt-4">
               <div class="row g-4">
                 <div class="col-sm-4 d-flex wow fadeIn" data-wow-delay="0.1s">

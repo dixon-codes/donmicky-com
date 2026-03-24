@@ -21,3 +21,6 @@ desktop.ini
 # Sensitive config (move credentials to environment variables)
 config.php
 .env
+
+# Local deploy script (contains FTP password — never commit!)
+deploy.ps1

@@ -231,6 +231,7 @@ if (isset($_POST['send-message'])) {
                                     </div>
                                     <span>
                                         <a href="tel:+255742118315" style="color:inherit; display:block;">+255 742 118 315</a>
+                                        <a href="tel:+255712065662" style="color:inherit; display:block;">+255 712 065 662</a>
                                         <a href="tel:+447438390337" style="color:inherit; display:block;">+44 7438 390337</a>
                                     </span>
                                 </div>

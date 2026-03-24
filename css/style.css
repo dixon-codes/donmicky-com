@@ -10,10 +10,17 @@
 
 
 /*** custom container ***/
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
 
-
-
-
+@media (max-width: 991.98px) {
+  .row.g-5 {
+    --bs-gutter-x: 1.5rem !important;
+    --bs-gutter-y: 2rem !important;
+  }
+}
 /*** end of custom container ***/
 
 
@@ -88,13 +95,14 @@
 }
 
 .navbar .navbar-nav .nav-link {
-  margin-left: 120px;
+  margin-left: 45px;
   padding: 25px 0;
   color: var(--secondary);
   font-weight: 500;
   text-transform: uppercase;
   outline: none;
-  font-size:14px;
+  font-size: 12px;
+  white-space: nowrap;
 }
 
 .navbar .navbar-nav .nav-link:hover,

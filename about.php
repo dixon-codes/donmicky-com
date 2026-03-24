@@ -6,8 +6,8 @@
   <title>Donmicky Real Estate Developers – About Us</title>
   <meta content="width=device-width, initial-scale=1.0" name="viewport" />
   <meta content="real estate, property, Tanzania, Dar es Salaam" name="keywords" />
-  <meta content="Learn about Donmicky Real Estate Developers – your trusted partner for buying and selling property in Tanzania." name="description" />
-  <!--test😭-->
+  <meta content="Learn about Donmicky Real Estate Developers – your trusted provider of affordable, quality homes with reliable internet in Tanzania." name="description" />
+
   <!-- Favicon -->
   <link href="img/icon.png" rel="icon" />
 
@@ -109,17 +109,18 @@
         </div>
         <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.5s">
           <div class="h-100">
-            <div class="border-start border-5 border-primary ps-4 mb-5">
+            <div class="border-start border-5 border-primary ps-4 mb-4">
               <h6 class="text-body text-uppercase mb-2">About Us</h6>
               <h1 class="display-6 mb-0">Donmicky Real Estate Developers</h1>
             </div>
+            <h5 class="text-primary mb-4">Affordable, Quality houses with internet</h5>
 
             <p>
-              Donmicky Real Estate Developers is a premier property company based in Dar es Salaam, Tanzania, dedicated to connecting people with their perfect homes and lucrative real estate investments.
+              Donmicky Real Estate Developers is a premier property company based in Dar es Salaam, Tanzania, dedicated to connecting people with affordable, high-quality homes equipped with reliable internet access.
             </p>
 
             <p class="mb-4">
-              With a deep understanding of the Tanzanian property market, we specialize in residential and commercial real estate, offering a curated portfolio of high-quality properties in prime locations such as Sinza, Mbezi, and surrounding areas.
+              With a deep understanding of the Tanzanian property market, we specialize in modern residential real estate. Our curated portfolio focuses on delivering premium yet budget-friendly properties in prime locations such as Sinza, Mbezi, and surrounding areas, ensuring you stay connected to what matters most.
             </p>
 
             <p class="mb-4">
