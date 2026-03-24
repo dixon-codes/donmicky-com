@@ -123,6 +123,7 @@ html, body {
   .navbar .navbar-nav .nav-link {
     margin-left: 0;
     padding: 10px 0;
+    white-space: nowrap !important;
   }
 
   .navbar .navbar-nav {
@@ -343,6 +344,7 @@ html, body {
   font-weight: normal;
   text-transform: capitalize;
   transition: 0.3s;
+  white-space: nowrap !important;
 }
 
 .footer .btn.btn-link::before {
