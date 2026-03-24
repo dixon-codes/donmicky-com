@@ -72,9 +72,9 @@
 
             </p>
 
-            <p><i class="fa fa-phone-alt me-3"></i>+255 742 118 315</p>
-
             <p><i class="fa fa-phone-alt me-3"></i>+255 712 065 662</p>
+
+            <p><i class="fa fa-phone-alt me-3"></i>+255 742 118 315</p>
 
             <p><i class="fa fa-phone-alt me-3"></i>+44 7438 390337</p>
 

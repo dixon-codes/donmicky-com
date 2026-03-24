@@ -4,14 +4,13 @@
 
       <div class="col-lg-7  text-start">
 
-        <div
-          class="h-100 d-inline-flex align-items-center border-start border-end px-3">
+        <div class="h-100 d-inline-flex align-items-center border-start border-end px-3">
           <small class="fa fa-phone-alt me-2"></small>
-          <small><a href="tel:+255742118315" style="color: #999999;">+255 742 118 315</a></small>
+          <small><a href="tel:+255712065662" style="color: #999999;">+255 712 065 662</a></small>
         </div>
         <div class="h-100 d-inline-flex align-items-center border-end px-3">
           <small class="fa fa-phone-alt me-2"></small>
-          <small><a href="tel:+255712065662" style="color: #999999;">+255 712 065 662</a></small>
+          <small><a href="tel:+255742118315" style="color: #999999;">+255 742 118 315</a></small>
         </div>
 
         <div class="h-100 d-inline-flex align-items-center border-end px-3">

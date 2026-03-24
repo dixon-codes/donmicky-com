@@ -165,8 +165,8 @@ if (isset($_POST['send-message'])) {
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <div class="navbar-nav ms-auto py-3 py-lg-0">
          <a href="./" class="nav-item nav-link" style="">Home</a>
-        <a href="about" class="nav-item nav-link">About Us</a>
         <a href="order" class="nav-item nav-link">Buy / Sell</a>
+        <a href="about" class="nav-item nav-link">About Us</a>
         <a href="contact" class="nav-item nav-link active">Contact Us</a>
        
       </div>
@@ -230,8 +230,8 @@ if (isset($_POST['send-message'])) {
                                         <i class="fa fa-phone-alt" style="color:#e9383f;"></i>
                                     </div>
                                     <span>
-                                        <a href="tel:+255742118315" style="color:inherit; display:block;">+255 742 118 315</a>
                                         <a href="tel:+255712065662" style="color:inherit; display:block;">+255 712 065 662</a>
+                                        <a href="tel:+255742118315" style="color:inherit; display:block;">+255 742 118 315</a>
                                         <a href="tel:+447438390337" style="color:inherit; display:block;">+44 7438 390337</a>
                                     </span>
                                 </div>

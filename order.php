@@ -300,8 +300,8 @@ if (isset($_POST['send-sell'])) {
       <div class="collapse navbar-collapse" id="navbarCollapse">
         <div class="navbar-nav ms-auto py-3 py-lg-0">
           <a href="./" class="nav-item nav-link">Home</a>
-          <a href="about" class="nav-item nav-link">About Us</a>
           <a href="order" class="nav-item nav-link active">Buy / Sell</a>
+          <a href="about" class="nav-item nav-link">About Us</a>
           <a href="contact" class="nav-item nav-link">Contact Us</a>
         </div>
       </div>
