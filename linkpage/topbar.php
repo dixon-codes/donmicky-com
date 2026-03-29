@@ -1,3 +1,4 @@
+<div class="container px-0">
 <div class="bg-light p-0">
   <div class="container">
     <div class="row gx-0 d-none d-lg-flex">
@@ -66,4 +67,5 @@
     </div>
   </div>
 
+</div>
 </div>

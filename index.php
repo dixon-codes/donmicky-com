@@ -142,11 +142,13 @@
       display: flex;
       align-items: center;
       justify-content: center;
+      text-align: center;
       background: rgba(0,0,0,0.45);
       padding: 20px;
     }
     #header-carousel .carousel-caption > .container {
       width: 100%;
+      text-align: center;
     }
     @media (max-width: 576px) {
       #header-carousel .carousel-item img { height: 350px; }
@@ -161,28 +163,12 @@
   <?php require 'linkpage/topbar.php'; ?>
   <!-- Topbar End -->
 
-  <!-- Navbar Start -->
-  <nav class="navbar navbar-expand-lg bg-white navbar-light sticky-top px-4 px-lg-5 py-lg-0">
-    <div class="container">
-      <?php require "linkpage/logo.php"; ?>
-      <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarCollapse">
-        <div class="navbar-nav ms-auto py-3 py-lg-0">
-          <a href="./" class="nav-item nav-link active">Home</a>
-          <a href="order" class="nav-item nav-link">Buy / Sell</a>
-          <a href="about" class="nav-item nav-link">About Us</a>
-          <a href="contact" class="nav-item nav-link">Contact Us</a>
-        </div>
-      </div>
-    </div>
-  </nav>
-  <!-- Navbar End -->
+  <?php require 'linkpage/navbar.php'; ?>
 
 
   <!-- Carousel Start -->
-  <div class="container-fluid p-0 mb-5 wow fadeIn" data-wow-delay="0.1s">
+  <div class="container mb-5 wow fadeIn" data-wow-delay="0.1s">
+  <div class="container-fluid p-0">
     <div id="header-carousel" class="carousel slide" data-bs-ride="carousel">
       <div class="carousel-inner">
 
@@ -243,6 +229,7 @@
         <span class="visually-hidden">Next</span>
       </button>
     </div>
+  </div>
   </div>
   <!-- Carousel End -->
 
