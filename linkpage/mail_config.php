@@ -1,18 +1,17 @@
 <?php
 /**
  * Central mail configuration for Donmicky Real Estate Developers
- * Uses PHPMailer with Gmail SMTP
+ * Uses PHPMailer with SiteGround SMTP (your own domain email)
  *
- * SETUP INSTRUCTIONS:
- * 1. Replace GMAIL_ADDRESS with your Gmail address (e.g. donmicky@gmail.com)
- * 2. For GMAIL_APP_PASSWORD: Go to Google Account → Security → 2-Step Verification → App Passwords
- *    Create an App Password for "Mail" → copy the 16-character code → paste below
- * 3. RECIPIENT_EMAIL is where all form submissions are sent
+ * SETUP:
+ * 1. MAIL_PASSWORD → the password you set for info@donmicky.co.tz in SiteGround cPanel
+ * 2. That's it. No Gmail, no App Passwords, nothing else.
  */
 
-define('GMAIL_ADDRESS',    'donmicky@gmail.com');       // <-- change to your Gmail
-define('GMAIL_APP_PASSWORD', 'xxxx xxxx xxxx xxxx');    // <-- paste your 16-char App Password
-define('RECIPIENT_EMAIL',  'info@donmicky.co.tz');       // destination for all form emails
+define('MAIL_FROM',     'info@donmicky.co.tz');      // the email account in SiteGround cPanel
+define('MAIL_PASSWORD', 'Korogwe2023');    // <-- paste the cPanel email password here
+define('RECIPIENT_1',   'info@donmicky.co.tz');   // primary recipient
+define('RECIPIENT_2',   'donmicklem@gmail.com');    // secondary recipient
 
 require_once __DIR__ . '/../PHPMailer-6.9.1/src/PHPMailer.php';
 require_once __DIR__ . '/../phpmailer/src/SMTP.php';
@@ -22,11 +21,11 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 
 /**
- * Send an email via Gmail SMTP.
+ * Send an email via SiteGround SMTP.
  *
  * @param string $subject   Email subject
  * @param string $htmlBody  HTML body of the email
- * @param string $replyTo   Reply-to address (sender from the form)
+ * @param string $replyTo   Reply-to address (the person who submitted the form)
  * @param string $replyName Name of the reply-to person
  * @return bool|string true on success, error string on failure
  */
@@ -34,22 +33,33 @@ function sendMail(string $subject, string $htmlBody, string $replyTo = '', strin
 {
     $mail = new PHPMailer(true);
     try {
-        // SMTP configuration
+        // SiteGround SMTP — uses your own domain mail server
         $mail->isSMTP();
-        $mail->Host       = 'smtp.gmail.com';
+        $mail->Host       = 'mail.donmicky.co.tz';   // SiteGround mail server for your domain
         $mail->SMTPAuth   = true;
-        $mail->Username   = GMAIL_ADDRESS;
-        $mail->Password   = GMAIL_APP_PASSWORD;
-        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS;
-        $mail->Port       = 587;
+        $mail->Username   = MAIL_FROM;
+        $mail->Password   = MAIL_PASSWORD;
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // SiteGround recommends 465/SMTPS
+        $mail->Port       = 465;
 
-        // Sender
-        $mail->setFrom(GMAIL_ADDRESS, 'Donmicky Real Estate Developers');
+        // SiteGround shared hosting uses one SSL cert for many domains,
+        // which causes a CN mismatch. This disables the verification.
+        $mail->SMTPOptions = [
+            'ssl' => [
+                'verify_peer'       => false,
+                'verify_peer_name'  => false,
+                'allow_self_signed' => true,
+            ],
+        ];
 
-        // Recipient
-        $mail->addAddress(RECIPIENT_EMAIL, 'Donmicky Real Estate');
+        // Sender — shows "Donmicky Real Estate Developers <info@donmicky.co.tz>"
+        $mail->setFrom(MAIL_FROM, 'Donmicky Real Estate Developers');
 
-        // Reply-To (the person who submitted the form)
+        // Both recipients get every form submission
+        $mail->addAddress(RECIPIENT_1, 'Donmicky Real Estate');
+        $mail->addAddress(RECIPIENT_2, 'Donmicky (Personal)');
+
+        // Reply-To set to whoever filled the form so you can reply directly to them
         if ($replyTo) {
             $mail->addReplyTo($replyTo, $replyName ?: $replyTo);
         }

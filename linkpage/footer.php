@@ -102,7 +102,7 @@
 
             <div class="col-md-6 text-center text-md-end">
 
-              Designed By <a href="https://www.instagram.com/dixarn?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" target="_blank">Dixarn IT</a>
+              Designed By <a href="dixarn.co.tz" target="_blank">Dixarn IT</a>
 
             </div>
 

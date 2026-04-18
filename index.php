@@ -28,7 +28,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Template Stylesheet -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/style.css?v=2" rel="stylesheet" />
   <style type="text/css">
     .navbar .navbar-nav .nav-link:hover,
     .navbar .navbar-nav .nav-link.active {
@@ -100,6 +100,43 @@
     .property-badge {
       display: inline-block;
       background: #ed1b24;
+      color: #fff;
+      font-size: 0.75rem;
+      padding: 3px 10px;
+      border-radius: 20px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+    }
+
+    /* Sold Out */
+    .sold-out-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      pointer-events: none;
+    }
+    .sold-out-stamp {
+      border: 4px solid #fff;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 2rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      padding: 8px 24px;
+      text-transform: uppercase;
+      transform: rotate(-15deg);
+      opacity: 0.92;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      background: rgba(180,0,0,0.55);
+      border-radius: 6px;
+    }
+    .property-badge-sold {
+      display: inline-block;
+      background: #555;
       color: #fff;
       font-size: 0.75rem;
       padding: 3px 10px;
@@ -185,7 +222,7 @@
                     YOUR TRUSTED PARTNER IN PROPERTY
                   </h1>
                   <p class="fs-4 text-light mb-4 animated slideInDown">
-                    Affordable, Quality houses with internet
+                    Smart homes, real value
                   </p>
                   <div class="d-flex gap-3 justify-content-center flex-wrap">
                     <a href="order?action=buy" class="btn btn-new py-3 px-5">Buy a Property</a>
@@ -210,7 +247,7 @@
                     FIND YOUR DREAM HOME IN TANZANIA
                   </h1>
                   <p class="fs-4 text-light mb-4 animated slideInDown">
-                    Affordable, Quality houses with internet
+                    Smart homes, real value
                   </p>
                   <a href="order?action=buy" class="btn btn-new py-3 px-5">View Properties</a>
                 </div>
@@ -237,7 +274,7 @@
   <!-- About / Intro Start -->
   <div class="container-xxl py-5">
     <div class="container">
-      <div class="row g-5 align-items-center">
+      <div class="row g-5 align-items-stretch">
         <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
           <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
             <img class="position-absolute w-100 h-100" src="img/page-header-bg.png" alt="Donmicky Real Estate" style="object-fit: cover;" />
@@ -249,7 +286,7 @@
               <h6 class="text-body text-uppercase mb-2">Our Company</h6>
               <h1 class="display-6 mb-0">Donmicky Real Estate Developers</h1>
             </div>
-            <h5 class="text-primary mb-4">Affordable, Quality houses with internet</h5>
+            <h5 class="text-primary mb-4">Smart homes, real value</h5>
             <p>Donmicky Real Estate Developers is a trusted property company based in Dar es Salaam, Tanzania. We specialize in providing families and professionals with affordable, high-quality homes that come fully equipped with reliable internet access.</p>
             <p>Whether you are looking to purchase your perfect modern living space or sell your property at the best price, our team is here to guide you every step of the way.</p>
             <div class="mt-4">
@@ -295,34 +332,88 @@
         <h6>Available Now</h6>
         <h2>Our Properties</h2>
       </div>
-      <p class="mb-4 wow fadeInUp" data-wow-delay="0.2s">Click on any property below to apply and buy.</p>
+      <p class="mb-4 wow fadeInUp" data-wow-delay="0.2s">Click on any property below to apply and buy. Photos coming soon!</p>
 
       <div class="row g-4">
 
-        <!-- Property 1: Sinza -->
-        <div class="col-md-6 wow fadeInUp" data-wow-delay="0.2s">
-          <a href="order?action=buy&property=Sinza" class="property-card">
-            <img src="img/property-sinza.jpg" alt="House in Sinza" />
+        <!-- DONMICKY 1 -->
+        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.2s">
+          <div class="property-card">
+            <div id="carouselDonmicky1" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active"><img src="img/1.jpeg" class="d-block w-100" alt="Donmicky 1 - Photo 1"></div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselDonmicky1" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselDonmicky1" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
             <div class="property-card-body">
               <span class="property-badge mb-2">For Sale</span>
-              <h5 class="mt-2">Residential House – Sinza</h5>
-              <p><i class="fa fa-map-marker-alt me-2 text-danger"></i>Sinza, Dar es Salaam</p>
-              <span class="btn btn-new btn-sm px-4">Apply to Buy &rarr;</span>
+              <h5 class="mt-2">DONMICKY 1</h5>
+              <p class="mb-1"><i class="fa fa-map-marker-alt me-2 text-danger"></i>Plot No. 42706, Kimara B Area, Saranga Ward, Ubungo District, Dar es Salaam</p>
+              <p class="mb-3" style="color: #555; font-size: 0.88rem;">A well-appointed 2-bedroom home featuring a master bedroom, modern kitchen, spacious sitting room, and dining area. Includes a dedicated 2,000-litre water storage tank, prepaid electricity (luku), and reliable top-up internet connectivity.</p>
+              <p class="fw-bold mb-3" style="color: #ed1b24; font-size: 1.1rem;">Price: Tsh 85,000,000</p>
+              <a href="order?action=buy&property=Donmicky1" class="btn btn-new btn-sm px-4">Apply to Buy &rarr;</a>
             </div>
-          </a>
+          </div>
         </div>
 
-        <!-- Property 2: Mbezi -->
-        <div class="col-md-6 wow fadeInUp" data-wow-delay="0.4s">
-          <a href="order?action=buy&property=Mbezi" class="property-card">
-            <img src="img/property-mbezi.jpg" alt="House in Mbezi" />
+        <!-- DONMICKY 2 -->
+        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.4s">
+          <div class="property-card">
+            <div id="carouselDonmicky2" class="carousel slide" data-bs-ride="carousel">
+              <div class="carousel-inner">
+                <div class="carousel-item active"><img src="img/2.jpeg" class="d-block w-100" alt="Donmicky 2 - Photo 1"></div>
+                <div class="carousel-item"><img src="img/2 (2).jpeg" class="d-block w-100" alt="Donmicky 2 - Photo 2"></div>
+              </div>
+              <button class="carousel-control-prev" type="button" data-bs-target="#carouselDonmicky2" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button class="carousel-control-next" type="button" data-bs-target="#carouselDonmicky2" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
             <div class="property-card-body">
               <span class="property-badge mb-2">For Sale</span>
-              <h5 class="mt-2">Residential House – Mbezi</h5>
-              <p><i class="fa fa-map-marker-alt me-2 text-danger"></i>Mbezi, Dar es Salaam</p>
-              <span class="btn btn-new btn-sm px-4">Apply to Buy &rarr;</span>
+              <h5 class="mt-2">DONMICKY 2</h5>
+              <p class="mb-1"><i class="fa fa-map-marker-alt me-2 text-danger"></i>Magomeni B, Nia Njema Ward, Bagamoyo District, Pwani Region</p>
+              <p class="mb-3" style="color: #555; font-size: 0.88rem;">A spacious 3-bedroom residence comprising a master en-suite bedroom, two additional bedrooms, and a self-contained servant's quarter with its own master bedroom. Also features an outdoor shared toilet and is fitted with a prepaid electricity (luku) meter.</p>
+              <p class="fw-bold mb-3" style="color: #ed1b24; font-size: 1.1rem;">Price: Tsh 70,000,000</p>
+              <a href="order?action=buy&property=Donmicky2" class="btn btn-new btn-sm px-4">Apply to Buy &rarr;</a>
             </div>
-          </a>
+          </div>
+        </div>
+
+        <!-- DONMICKY 3 -->
+        <div class="col-md-4 wow fadeInUp" data-wow-delay="0.6s">
+          <div class="property-card">
+            <div style="position:relative;">
+              <div id="carouselDonmicky3" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active"><img src="img/3.jpeg" class="d-block w-100" alt="Donmicky 3"></div>
+                </div>
+              </div>
+              <!-- Sold Out Overlay -->
+              <div class="sold-out-overlay">
+                <span class="sold-out-stamp">Sold Out</span>
+              </div>
+            </div>
+            <div class="property-card-body">
+              <span class="property-badge-sold mb-2">Sold Out</span>
+              <h5 class="mt-2">DONMICKY 3</h5>
+              <p class="mb-1"><i class="fa fa-map-marker-alt me-2 text-danger"></i>Mapinga Area, Pwani Region, Tanzania</p>
+              <p class="mb-3" style="color: #555; font-size: 0.88rem;">A premium property in the tranquil Mapinga area offering generous living spaces, modern finishes, and a serene environment ideal for families seeking comfort and value outside the city centre.</p>
+              <p class="fw-bold mb-3" style="color: #555; font-size: 1.1rem;">Price: Tsh 110,000,000</p>
+              <button class="btn btn-secondary btn-sm px-4" disabled>Sold Out</button>
+            </div>
+          </div>
         </div>
 
       </div>

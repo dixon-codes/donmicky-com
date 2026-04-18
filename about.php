@@ -28,7 +28,7 @@
   <link href="css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Template Stylesheet -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/style.css?v=2" rel="stylesheet" />
   <style type="text/css">
     .navbar .navbar-nav .nav-link:hover,
     .navbar .navbar-nav .nav-link.active {
@@ -84,7 +84,7 @@
   <!-- About Start -->
   <div class="container-xxl py-5">
     <div class="container">
-      <div class="row g-5 align-items-start">
+      <div class="row g-5 align-items-stretch">
         <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s">
           <div class="position-relative overflow-hidden h-100" style="min-height: 400px;">
             <img class="position-absolute w-100 h-100" src="img/page-header-bg.png" alt="Donmicky Real Estate Developers" style="object-fit: cover;" />
@@ -96,14 +96,14 @@
               <h6 class="text-body text-uppercase mb-2">About Us</h6>
               <h1 class="display-6 mb-0">Donmicky Real Estate Developers</h1>
             </div>
-            <h5 class="text-primary mb-4">Affordable, Quality houses with internet</h5>
+            <h5 class="text-primary mb-4">Smart homes, real value</h5>
 
             <p>
               Donmicky Real Estate Developers is a premier property company based in Dar es Salaam, Tanzania, dedicated to connecting people with affordable, high-quality homes equipped with reliable internet access.
             </p>
 
             <p class="mb-4">
-              With a deep understanding of the Tanzanian property market, we specialize in modern residential real estate. Our curated portfolio focuses on delivering premium yet budget-friendly properties in prime locations such as Sinza, Mbezi, and surrounding areas, ensuring you stay connected to what matters most.
+              With a deep understanding of the Tanzanian property market, we specialize in modern residential real estate. Our curated portfolio focuses on delivering premium yet budget-friendly properties in prime locations such as Ubungo, Bagamoyo, Mapinga, and surrounding areas, ensuring you stay connected to what matters most.
             </p>
 
             <p class="mb-4">

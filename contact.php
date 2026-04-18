@@ -80,7 +80,7 @@ if (isset($_POST['send-message'])) {
     <link href="css/bootstrap.min.css" rel="stylesheet" />
 
     <!-- Template Stylesheet -->
-    <link href="css/style.css" rel="stylesheet" />
+    <link href="css/style.css?v=2" rel="stylesheet" />
     <style type="text/css">
       .navbar .navbar-nav .nav-link:hover,
       .navbar .navbar-nav .nav-link.active {

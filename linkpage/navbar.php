@@ -1,10 +1,11 @@
 <?php
-// Auto-detect active page from the request URI
+// Get just the last segment of the URI (works on any subdirectory depth)
 $currentPath = strtok($_SERVER['REQUEST_URI'], '?'); // strip query string
-$currentPath = trim($currentPath, '/');
+$currentPath = basename($currentPath);                // e.g. "about" or "about.php"
+$currentPath = preg_replace('/\.php$/i', '', $currentPath); // strip .php extension
 
-// Normalise: "index.php" and "" both map to home
-if ($currentPath === 'index.php') $currentPath = '';
+// "index" and "" both map to home
+if ($currentPath === 'index' || $currentPath === '') $currentPath = '';
 
 function navActive(string $page, string $current): string {
     return $page === $current ? ' active' : '';
@@ -20,8 +21,8 @@ function navActive(string $page, string $current): string {
     <div class="collapse navbar-collapse" id="navbarCollapse">
       <div class="navbar-nav ms-auto py-3 py-lg-0">
         <a href="./" class="nav-item nav-link<?php echo navActive('', $currentPath); ?>">Home</a>
-        <a href="order" class="nav-item nav-link<?php echo navActive('order', $currentPath); ?>">Buy / Sell</a>
         <a href="about" class="nav-item nav-link<?php echo navActive('about', $currentPath); ?>">About Us</a>
+        <a href="order" class="nav-item nav-link<?php echo navActive('order', $currentPath); ?>">Buy or Sell</a>
         <a href="contact" class="nav-item nav-link<?php echo navActive('contact', $currentPath); ?>">Contact Us</a>
       </div>
     </div>

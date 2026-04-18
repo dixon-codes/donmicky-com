@@ -133,7 +133,7 @@ if (isset($_POST['send-sell'])) {
   <link href="css/bootstrap.min.css" rel="stylesheet" />
 
   <!-- Template Stylesheet -->
-  <link href="css/style.css" rel="stylesheet" />
+  <link href="css/style.css?v=2" rel="stylesheet" />
 
   <style type="text/css">
     .navbar .navbar-nav .nav-link:hover,
@@ -207,6 +207,42 @@ if (isset($_POST['send-sell'])) {
     .prop-card-body h5 { font-weight: 700; color: #222; margin-bottom: 4px; }
     .prop-card-body p { color: #888; font-size: 0.9rem; margin: 0; }
     .prop-badge { background: #e9383f; color: #fff; padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+    .prop-badge-sold { background: #555; color: #fff; padding: 3px 10px; border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+
+    /* Sold Out overlay */
+    .sold-out-overlay {
+      position: absolute;
+      top: 0; left: 0; right: 0; bottom: 0;
+      background: rgba(0,0,0,0.45);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 10;
+      pointer-events: none;
+    }
+    .sold-out-stamp {
+      border: 4px solid #fff;
+      color: #fff;
+      font-family: 'Poppins', sans-serif;
+      font-size: 1.8rem;
+      font-weight: 700;
+      letter-spacing: 4px;
+      padding: 8px 20px;
+      text-transform: uppercase;
+      transform: rotate(-15deg);
+      opacity: 0.92;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      background: rgba(180,0,0,0.55);
+      border-radius: 6px;
+    }
+    .prop-card-sold {
+      cursor: default !important;
+    }
+    .prop-card-sold:hover {
+      transform: none !important;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.10) !important;
+      border-color: transparent !important;
+    }
 
     /* Buy form section */
     #buy-form-section {
@@ -334,26 +370,79 @@ if (isset($_POST['send-sell'])) {
 
         <div class="row g-4 justify-content-center">
 
-          <!-- Sinza Card -->
-          <div class="col-md-5">
-            <div class="prop-card <?php echo $preselectedProperty === 'Sinza' ? 'selected' : ''; ?>" onclick="selectProperty('Sinza', this)">
-              <img src="img/property-sinza.jpg" alt="House in Sinza" />
+          <!-- DONMICKY 1 -->
+          <div class="col-md-4">
+            <div class="prop-card <?php echo $preselectedProperty === 'Donmicky1' ? 'selected' : ''; ?>" onclick="selectProperty('Donmicky 1', this)">
+              <div id="carouselOrderDonmicky1" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active"><img src="img/1.jpeg" class="d-block w-100" alt="Donmicky 1"></div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselOrderDonmicky1" data-bs-slide="prev" onclick="event.stopPropagation()">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselOrderDonmicky1" data-bs-slide="next" onclick="event.stopPropagation()">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
               <div class="prop-card-body">
                 <span class="prop-badge">For Sale</span>
-                <h5 class="mt-2">Residential House – Sinza</h5>
-                <p><i class="fa fa-map-marker-alt me-2 text-danger"></i>Sinza, Dar es Salaam</p>
+                <h5 class="mt-2">DONMICKY 1</h5>
+                <p class="mb-1"><i class="fa fa-map-marker-alt me-2 text-danger"></i>Plot No. 42706, Kimara B Area, Saranga Ward, Ubungo District, Dar es Salaam</p>
+                <p class="mb-2" style="color: #555; font-size: 0.87rem;">A well-appointed 2-bedroom home featuring a master bedroom, modern kitchen, spacious sitting room, and dining area. Includes a dedicated 2,000-litre water storage tank, prepaid electricity (luku), and reliable top-up internet connectivity.</p>
+                <p class="fw-bold mb-0 mt-2" style="color: #ed1b24;">Price: Tsh 85,000,000</p>
               </div>
             </div>
           </div>
 
-          <!-- Mbezi Card -->
-          <div class="col-md-5">
-            <div class="prop-card <?php echo $preselectedProperty === 'Mbezi' ? 'selected' : ''; ?>" onclick="selectProperty('Mbezi', this)">
-              <img src="img/property-mbezi.jpg" alt="House in Mbezi" />
+          <!-- DONMICKY 2 -->
+          <div class="col-md-4">
+            <div class="prop-card <?php echo $preselectedProperty === 'Donmicky2' ? 'selected' : ''; ?>" onclick="selectProperty('Donmicky 2', this)">
+              <div id="carouselOrderDonmicky2" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                  <div class="carousel-item active"><img src="img/2.jpeg" class="d-block w-100" alt="Donmicky 2 - Photo 1"></div>
+                  <div class="carousel-item"><img src="img/2 (2).jpeg" class="d-block w-100" alt="Donmicky 2 - Photo 2"></div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselOrderDonmicky2" data-bs-slide="prev" onclick="event.stopPropagation()">
+                  <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselOrderDonmicky2" data-bs-slide="next" onclick="event.stopPropagation()">
+                  <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                  <span class="visually-hidden">Next</span>
+                </button>
+              </div>
               <div class="prop-card-body">
                 <span class="prop-badge">For Sale</span>
-                <h5 class="mt-2">Residential House – Mbezi</h5>
-                <p><i class="fa fa-map-marker-alt me-2 text-danger"></i>Mbezi, Dar es Salaam</p>
+                <h5 class="mt-2">DONMICKY 2</h5>
+                <p class="mb-1"><i class="fa fa-map-marker-alt me-2 text-danger"></i>Magomeni B, Nia Njema Ward, Bagamoyo District, Pwani Region</p>
+                <p class="mb-2" style="color: #555; font-size: 0.87rem;">A spacious 3-bedroom residence comprising a master en-suite bedroom, two additional bedrooms, and a self-contained servant's quarter with its own master bedroom. Also features an outdoor shared toilet and is fitted with a prepaid electricity (luku) meter.</p>
+                <p class="fw-bold mb-0 mt-2" style="color: #ed1b24;">Price: Tsh 70,000,000</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- DONMICKY 3 (SOLD OUT) -->
+          <div class="col-md-4">
+            <div class="prop-card prop-card-sold">
+              <div style="position: relative;">
+                <div id="carouselOrderDonmicky3" class="carousel slide" data-bs-ride="carousel">
+                  <div class="carousel-inner">
+                    <div class="carousel-item active"><img src="img/3.jpeg" class="d-block w-100" alt="Donmicky 3"></div>
+                  </div>
+                </div>
+                <!-- Sold Out Overlay -->
+                <div class="sold-out-overlay">
+                  <span class="sold-out-stamp">Sold Out</span>
+                </div>
+              </div>
+              <div class="prop-card-body">
+                <span class="prop-badge-sold">Sold Out</span>
+                <h5 class="mt-2">DONMICKY 3</h5>
+                <p class="mb-1"><i class="fa fa-map-marker-alt me-2 text-danger"></i>Mapinga Area, Pwani Region, Tanzania</p>
+                <p class="mb-2" style="color: #555; font-size: 0.87rem;">A premium property in the tranquil Mapinga area offering generous living spaces, modern finishes, and a serene environment ideal for families seeking comfort and value outside the city centre.</p>
+                <p class="fw-bold mb-0 mt-2" style="color: #555;">Price: Tsh 110,000,000</p>
               </div>
             </div>
           </div>
